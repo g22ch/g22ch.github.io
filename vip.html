@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="renderer" content="webkit">
+<title>VIP</title>
+<base target="_blank" />
+<link type="text/css" rel="stylesheet" href="tv.css">
+<style type="text/css">
+body,td,th { font-family: \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, Verdana, sans-serif; }
+</style>
+<script type="text/javascript">
+	function changeAction(){
+		var selectValue=document.getElementById('select').value;
+		document.forms[0].action=selectValue;
+	}
+	</script>
+</head>
+<body>
+<div class="nav_bar">
+	<div class="wrap"><span class="domain">会员视频免费播放</span><div class="nav_bar_r">(仅支持以下视频网站的会员免费视频)</div></div>
+</div>
+<div class="fh"></div>
+<div class="fh"></div>
+<div class="fh"></div>
+<div class="fh"></div>
+<div class="fh"></div>
+<div class="fh"></div>
+<div class="wrap mt1 nav">
+	<ul class="nav nav_menu clearfix">
+	<li><a href="https://vip.youku.com/vips/TV.html?tag=10005&pt=1">优酷会员</a></li>
+	<li><a href="http://film.qq.com/film_all_list/allfilm.html?type=movie">腾讯VIP</a></li>
+	<li><a href="http://vip.iqiyi.com/hot.html?cid=1">爱奇艺VIP</a></li>
+	<li><a href="http://list.le.com/listn/c1_t-1_a-1_y-1_s1_lg-1_ph2_md_o9_d1_p.html">乐视会员</a></li>
+	<li><a href="http://film.sohu.com/list_0_0_0_2_0_1_60.html?channeled=1200100000">搜狐会员</a></li>
+	<li><a href="http://www.mgtv.com/vip/pianku/">芒果TV会员</a></li>
+	</ul>
+</div>
+<div class="wrap mt20 nav">
+<dl class="lk">
+<div class="nav_bar_s" style="text-align: center">
+<div class="fh"></div>
+<form action="http://api.baiyug.cn/vip/index.php" method="get">
+<select id="select" onchange="changeAction();" style="width:12%;height:26px;text-align:center">
+	<option value="http://api.baiyug.cn/vip/index.php" style="text-align: center" selected>----通用接口----</option>
+	<option value="http://tv.wandhi.com/api">通用接口1</option>
+	<option value="http://www.sonimei.cn/">通用接口2</option>
+	<option value="http://cdn.yangju.vip/k/">通用接口3</option>
+	<option value="https://jiexi.071811.cc/jx.php">通用接口4</option>
+	<option value="http://www.sfsft.com/admin.php">备用接口1</option>
+	<option value="http://q.z.vip.totv.72du.com/">备用接口2</option>
+	<option value="http://v.renrenfabu.com/jiexi.php">备用接口3</option>
+	<option value="http://api.zuilingxian.com/jiexi.php">备用接口4</option>
+	<option value="http://api.bbbbbb.me/playm3u8/">腾讯接口1</option>
+</select>
+<input class="input" type="text" name="url"  value="http://v.youku.com/v_show/id_XMzAyMzE4MTE2.html" style="width:58%;height:22px;">
+<input type="submit" value="提交播放" style="height:28px;width:100px;">
+</form>
+</div>
+</div>
+
+<div style="text-align: center"></div>
+<div style="display:none">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c5518d0b69154edaa6e0c59716f79898";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="//s11.cnzz.com/z_stat.php?id=1256707975&web_id=1256707975" language="JavaScript"></script></div>
+</body></html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>404-TV直播</title>
+<style type="text/css">
+body{margin:0;padding:0px;}
+</style>
+</head>
+<body>
+<script type="text/javascript" src="ck/ckplayer.js" charset="utf-8"></script>
+<div id="a1" align="center"></div>
+<script type="text/javascript">
+var agentstr='';
+
+var vid=window.location.href;//hdcctv5
+if(vid.indexOf('cntv.html?id=')>0) vid=vid.split('cntv.html?id=')[1];
+var fromUrl=document.referrer;
+
+function getHtml5VideoData(html5VideoData){
+	 var html5VideoData = eval('(' + html5VideoData + ')');
+	var saurl=html5VideoData.hls_url.hls1;
+	if(agentstr=='phone'){
+	document.getElementById('a1').innerHTML='<video controls="controls" autoplay="autoplay" src="'+saurl+'" width="600" height="500"></video>';	
+	}else{
+	var flashvars = {
+	 f: 'ck/m3u8.swf',         //使用swf向播放器发送视频地址进行播放  
+    a: encodeURIComponent(decodeURIComponent(saurl)), //m3u8文件	
+    c: 0,       //调用 ckplayer.js 配置播放器  
+    p: 1,       //自动播放视频  
+    s: 4,       //flash插件形式发送视频流地址给播放器进行播放  
+    lv: 1,      //注意，如果是直播，需设置lv:1  
+    loaded: 'loadedHandler'  
+}
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ck/ckplayer.swf','a1','ckplayer_a1','900','675',flashvars,params);	
+	function closelights(){//关灯
+		alert(' 本演示不支持开关灯');
+	}
+	function openlights(){//开灯
+		alert(' 本演示不支持开关灯');
+	}	
+	}
+	
+	}
+	
+document.writeln('<scri'+'pt src="http://vdn.live.cntv.cn/api2/liveHtml5.do?channel=pa://cctv_p2p_'+vid+'&client=cbox" language="jav'+'ascript"><\/script>');
+</script>
+</body>
+</html>
